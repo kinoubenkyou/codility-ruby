@@ -1,6 +1,6 @@
 def solution(s, p, q)
   hash = { A: [0], C: [0], G: [0], T: [0] }
-  s.each_char do |nucleotide|
+  s.chars.each do |nucleotide|
     hash.each do |type, counts|
       if nucleotide.to_sym == type
         counts.append(counts[-1] + 1)
